@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 // 模块化封装，引入命名空间
-namespace MobaGame
+namespace Game
 {
     // 不继承Mono的类可以使用New的方式
     public abstract class Singleton<T> where T : new()

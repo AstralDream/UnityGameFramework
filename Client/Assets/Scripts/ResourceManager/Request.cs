@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
+    // 请求加载或卸载
     public enum RequestType
     {
         LOAD,
@@ -21,7 +22,9 @@ namespace MobaGame.Resource
         internal ResourcesManager.HandleFinishLoad mHandle;
         internal ResourcesManager.HandleFinishLoadLevel mHandleLevel;
         internal ResourcesManager.HandleFinishUnLoadLevel mHandleUnloadLevel;
+        //请求类型
         internal RequestType mRequestType;
+        //资源异步操作
         internal ResourceAsyncOperation mResourceAsyncOperation;
 
         //internal Request(string path, ResourceType resourceType, ResourcesManager.HandleFinishLoad handle, RequestType requestType, ResourceAsyncOperation operation)

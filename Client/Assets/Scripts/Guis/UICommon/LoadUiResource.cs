@@ -3,13 +3,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using MobaGame.Resource;
+using Game.Resource;
 
 public class LoadUiResource
 {
-    // string 是路径
+    // <传入Resources下相对路径名称 资源对象>
     public static Dictionary<string, GameObject> LoadResDic = new Dictionary<string, GameObject>();
 
+    // 加载UI资源
     public static GameObject LoadRes(Transform parent, string path)
     {
         if (CheckResInDic(path))
@@ -58,7 +59,9 @@ public class LoadUiResource
 
         return objLoad;
     }
-
+    // 因为孩子节点是需要清除的，所以不加入资源管理
+    //DestroyImmediate是立即销毁，立即释放资源，GetChild(0)
+    //Destroy是异步销毁，一般在下一帧就销毁了，不会影响主线程的运行，GetChild(i)
     public static void ClearAllChild(Transform transform)
     {
         while (transform.childCount > 0)
@@ -67,7 +70,7 @@ public class LoadUiResource
         }
         transform.DetachChildren();
     }
-
+    // 清除指定孩子
     public static void ClearOneChild(Transform transform, string name)
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -78,7 +81,7 @@ public class LoadUiResource
             }
         }
     }
-
+    // 删除资源（路径）
     public static void DestroyLoad(string path)
     {
         if (LoadResDic == null || LoadResDic.Count == 0)
@@ -91,7 +94,7 @@ public class LoadUiResource
             //System.GC.Collect();
         }
     }
-
+    // 删除资源（对象） 
     public static void DestroyLoad(GameObject obj)
     {
         if (LoadResDic == null || LoadResDic.Count == 0)
@@ -122,7 +125,7 @@ public class LoadUiResource
         }
         return null;
     }
-
+    // 检查资源是否存在
     public static bool CheckResInDic(string path)
     {
         if (LoadResDic == null || LoadResDic.Count == 0)

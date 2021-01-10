@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
     public enum ResourceType
     {

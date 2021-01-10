@@ -3,7 +3,7 @@ using System.Xml;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
 
     // 将所有资源结构以xml形式存放起来，name是资源存储路径，type是文件类型

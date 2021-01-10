@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
+    // 存档
     public class Archive
     {
         //private string mName;
@@ -12,7 +13,7 @@ namespace MobaGame.Resource
         //private string mPath;
         //private bool mUseSuffix;
         //private string mSuffix;
-        private Dictionary<string, string> mAllFiles; //name-type
+        private Dictionary<string, string> mAllFiles; //<文件路径+名称，文件类型>
 
         public Archive()
         {

@@ -8,14 +8,15 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
+    // 资源相关静态量
     public class ResourceCommon
     {
         public static string textFilePath = Application.streamingAssetsPath;
-
+        // assetbundle文件路径
         public static string assetbundleFilePath = Application.dataPath + "/assetbundles/";
-
+        // assetbundle 文件后缀
         public static string assetbundleFileSuffix = ".bytes";
 
         public static string DEBUGTYPENAME = "Resource";

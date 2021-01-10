@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
     public class ResourceAsyncOperation
     {
@@ -29,7 +29,7 @@ namespace MobaGame.Resource
                 return mComplete;
             }
         }
-
+        // 只有加载关卡；才会有进度条的处理方式
         public int Prograss
         {
             get

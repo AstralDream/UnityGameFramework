@@ -7,11 +7,11 @@ using System.Collections.Generic;
 using Object = UnityEngine.Object;
 using UnityEngine.SceneManagement;
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
     public class ResourcesManager : UnitySingleton<ResourcesManager>
     {
-        //是否通过assetbundle加载资源；还是用实例化加载
+        //是否通过assetbundle加载资源；还是用实例化加载；本地运行不需要打包assetbundle时为false
         public bool UsedAssetBundle = false;
         // 标记只初始化一次
         private bool mInit = false;

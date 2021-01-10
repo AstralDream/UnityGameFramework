@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
     // 他存储的是资源的具体信息
     // 资源包括mp3，脚本信息，图片，预制体，模型等任何资源

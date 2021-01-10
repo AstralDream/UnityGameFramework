@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MobaGame.Resource
+namespace Game.Resource
 {
     public class LogManager : Singleton<LogManager>
     {
